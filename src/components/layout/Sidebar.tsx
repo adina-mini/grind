@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { useApp } from '../../store/AppContext';
 import { ProgressBar } from '../common/ProgressBar';
+import { BuilderProfile } from './BuilderProfile';
 
 interface SidebarProps {
   currentView: string;
@@ -113,6 +114,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, onNavigate }) => 
             <span>{xpStats.levelProgressPercent}%</span>
           </div>
         </div>
+
+        {/* Builder Profile Section */}
+        <BuilderProfile />
       </div>
     </aside>
   );

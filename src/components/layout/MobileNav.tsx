@@ -13,6 +13,7 @@ import {
   Award,
 } from 'lucide-react';
 import { useApp } from '../../store/AppContext';
+import { BuilderProfile } from './BuilderProfile';
 
 interface MobileNavProps {
   isOpen: boolean;
@@ -104,6 +105,10 @@ export const MobileNav: React.FC<MobileNavProps> = ({
           <div className="flex justify-between items-center text-xs font-mono">
             <span className="text-dark-muted">Level {xpStats.currentLevel}:</span>
             <span className="text-dark-text font-semibold">{xpStats.totalXP} XP</span>
+          </div>
+
+          <div className="pt-2">
+            <BuilderProfile />
           </div>
         </div>
       </div>
