@@ -7,8 +7,8 @@ export const BuilderProfile: React.FC = () => {
 
   const email = 'adinarehman018@gmail.com';
   const githubUrl = 'https://github.com/adina-mini';
-  const linkedinUrl = 'https://linkedin.com';
-  const xUrl = 'https://x.com';
+  const linkedinUrl = 'https://www.linkedin.com/in/adina-rehman-z';
+  const xUrl = 'https://x.com/adina61785';
 
   const handleCopyEmail = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -100,11 +100,10 @@ export const BuilderProfile: React.FC = () => {
           <button
             onClick={handleCopyEmail}
             title={copied ? 'Email copied!' : `Copy ${email}`}
-            className={`flex items-center gap-1 px-1.5 py-1 rounded text-[10px] font-mono transition-all ${
-              copied
-                ? 'bg-emerald-950/70 text-emerald-400 border border-emerald-500/40'
-                : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/80'
-            }`}
+            className={`flex items-center gap-1 px-1.5 py-1 rounded text-[10px] font-mono transition-all ${copied
+              ? 'bg-emerald-950/70 text-emerald-400 border border-emerald-500/40'
+              : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/80'
+              }`}
             aria-label="Copy email to clipboard"
           >
             {copied ? (

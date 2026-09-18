@@ -35,9 +35,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, onNavigate }) => 
   ];
 
   return (
-    <aside className="hidden md:flex flex-col w-64 bg-dark-surface border-r border-dark-border flex-shrink-0 h-screen sticky top-0 overflow-y-auto">
+    <aside className="hidden md:flex flex-col w-64 bg-dark-surface border-r border-dark-border flex-shrink-0 h-screen sticky top-0">
       {/* Brand Header */}
-      <div className="p-5 border-b border-dark-border flex items-center gap-3">
+      <div className="p-4 border-b border-dark-border flex items-center gap-3 flex-shrink-0">
         <div className="w-8 h-8 rounded-lg bg-emerald-950/40 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shadow-sm">
           <Sparkles size={16} className="text-emerald-400" />
         </div>
@@ -52,7 +52,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, onNavigate }) => 
       </div>
 
       {/* Navigation Links */}
-      <nav className="flex-1 p-3 space-y-1">
+      <nav className="flex-1 p-3 space-y-1 overflow-y-auto min-h-0">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = currentView === item.id;
@@ -60,7 +60,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, onNavigate }) => 
             <button
               key={item.id}
               onClick={() => onNavigate(item.id)}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-xs font-medium transition-all ${
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
                 isActive
                   ? 'bg-zinc-800/80 text-zinc-100 border border-zinc-700/60 shadow-sm'
                   : 'text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/40 border border-transparent'
@@ -77,7 +77,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, onNavigate }) => 
       </nav>
 
       {/* Engineering Proof & Level Status Footer */}
-      <div className="p-4 border-t border-dark-border bg-dark-surface/50 space-y-3">
+      <div className="p-3 border-t border-dark-border bg-dark-surface/50 space-y-2.5 flex-shrink-0">
         {/* Proof Score Card */}
         <div className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-between">
           <div>
